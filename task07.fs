@@ -1,5 +1,3 @@
-module Task07
-
 // 20.3.1
 let vat n x = (x + x * float(n) / 100.0)
 
@@ -12,3 +10,5 @@ let rec search_min = function
 
 // 20.3.3
 let rec min f = search_min (f,1)
+
+
