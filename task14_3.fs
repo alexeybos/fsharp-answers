@@ -13,6 +13,10 @@ let ``insert 4 в слабовосходящий список [1;3;5;8] дает
    let actual = insert ([1;3;5;8], 4)
    Assert.Equal<int list>([1;3;4;5;8], actual)
 
+[<Fact>]
+let ``insert 0 в слабовосходящий список [0;0;1;1;1;2;3] дает [0; 0; 0; 1; 1; 1; 2; 3]`` () =
+   let actual = insert ([0;0;1;1;1;2;3], 0)
+   Assert.Equal<int list>([0; 0; 0; 1; 1; 1; 2; 3], actual)
 
 [<Fact>]
 let ``intersect ([1;3;5;8], [4]) дает []`` () =

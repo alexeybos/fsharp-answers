@@ -20,7 +20,7 @@ let rec insert (xs, n) =
   | (h, []) -> h @ [n]
   | (h, [x]) when x >= n -> h @ [n] @ [x]
   | (h, [x]) when x < n -> h @ [x] @ [n]
-  | (h, head :: (head2 :: _ as tail)) when head < n && head2 >= n -> h @ [head] @ [n] @ tail
+  | (h, head :: (head2 :: _ as tail)) when head <= n && head2 >= n -> h @ [head] @ [n] @ tail
   | (h, head :: tail) -> spl (h @ [head], tail)
  spl ([], xs)
 
