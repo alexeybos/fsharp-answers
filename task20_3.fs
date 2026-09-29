@@ -1,11 +1,11 @@
 ﻿[<Fact>]
-let ``проверка последовательности четных чисел`` () =
+let ``проверка последовательности четных ПОЛОЖИТЕЛЬНЫХ чисел`` () =
     let actual_a = Seq.nth 0 even_seq
     let actual_b = Seq.nth 1 even_seq
     let actual_c = Seq.nth 2 even_seq
-    Assert.Equal(0, actual_a)
-    Assert.Equal(2, actual_b)
-    Assert.Equal(4, actual_c)
+    Assert.Equal(2, actual_a)
+    Assert.Equal(4, actual_b)
+    Assert.Equal(6, actual_c)
 
 [<Fact>]
 let ``проверка последовательности факториалов`` () =
